@@ -11,9 +11,9 @@ var array_emails = [];
 for (n in a){
 
     addEventListener('click',function(event){
-
+      
         event.preventDefault();
-
+       
 
     });
 
@@ -81,6 +81,8 @@ function cadastraPessoa(){
     let dados = document.getElementById("tabela1")
     dados. classList. remove('invisivel');
     dados. classList. add('fadein');
+    
+
 
 
     
@@ -108,7 +110,7 @@ function cadastraTarefa(){
     let dados = document.getElementById("tabela2")
     dados. classList. remove('invisivel');
     dados. classList. add('fadein');
-
+    document.getElementById("tarefa").value="";
 
 
 }
