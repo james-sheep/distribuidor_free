@@ -1,0 +1,308 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+/* reset*/
+
+html,
+body{
+
+height: 100%;
+margin: 0;
+
+}
+
+* {
+font-family: 'Roboto', sans-serif;
+
+}
+
+
+.fadeOut {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.invisivel {
+    display: none;
+}
+
+
+button{
+
+opacity: 0.8;
+
+}
+
+
+
+#img{
+width: 50%;    
+margin-left: 25%;
+margin-top: 5%;
+margin-bottom: 10%;
+
+}
+
+article{
+
+text-align: center;
+border-radius: 15px;
+box-shadow: 2px 2px 2px rgb(177, 174, 177);
+background-color: rgb(233, 206, 241);
+margin: 5%;
+padding: 1%;
+color: rgba(54, 54, 54, 0.74);
+
+opacity: 0.8;
+font-size: medium;
+}
+
+#text{
+    
+background-color: rgb(231, 231, 238);
+margin: 7%;
+border-radius: 15px;
+box-shadow: 2px 2px 2px #CCC;
+padding: 2%;
+color: rgba(54, 54, 54, 0.74);
+text-align: center;
+font-size: small;
+}
+
+#section_forms{
+display: flexbox; 
+justify-content: space-around;
+width: 60%;
+margin-left: 20%;
+}
+
+label{
+
+font-size: small;
+
+}
+
+
+#tabela1{
+font-size: small;
+}
+#tabela2{
+font-size: small;
+}
+
+#tabela3{
+font-size: small;
+}
+
+#tabela4{
+font-size: small;
+}
+            
+button{
+
+opacity: 0.7;
+width: min-content;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (min-width: 480px){
+#img{
+    width: 25%;
+    display: flex;
+    justify-content: center;
+   
+    margin: 5%;
+   
+    
+    
+    }
+
+
+.fadeOut {
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.invisivel {
+    display: none;
+}
+
+
+button{
+
+opacity: 0.8;
+
+}
+
+article{
+
+display: flex;
+text-align: center;
+justify-content: center;
+border-radius: 15px;
+box-shadow: 2px 2px 2px rgb(177, 174, 177);
+background-color: rgb(231, 231, 238);
+margin: 5%;
+padding: 1%;
+color: rgba(54, 54, 54, 0.74);
+font-size: medium;
+opacity: 0.8;
+}
+
+#apresent{
+
+    display: flex;
+    justify-content:space-around;
+	margin: 5%;
+  
+}
+
+#apresent2{
+
+    display: flex;
+    justify-content:space-around;
+	margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15%;
+    margin-right: 15%;
+    border: darkgray;
+
+  
+}
+
+#form1{
+margin: auto;
+width: 25%;
+color: rgba(54, 54, 54, 0.74);
+}
+
+
+#lista{
+
+
+    box-shadow: 2px 2px 2px #CCC;
+    color: rgba(54, 54, 54, 0.74);
+
+
+}
+
+#text{
+background-color: rgb(231, 231, 238);
+margin: 3%;
+border-radius: 15px;
+box-shadow: 2px 2px 2px #CCC;
+padding: 2%;
+color: rgba(54, 54, 54, 0.74);
+text-align: center;
+}
+
+#BTN_distrib{
+
+
+    
+    
+    margin-bottom: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+#section_forms{
+    display: flex; 
+    justify-content: space-around;
+    
+    }
+    
+
+#tabela1{
+margin-top: 2%;
+text-align: center;
+width: 50%; 
+margin-left: 9%;
+margin-bottom: 3%;
+}
+
+.fadein {
+	opacity: 1;
+	transition: 0.5s;
+}
+
+
+
+#tabela2{
+    margin-top: 3%;
+    text-align: center;
+    width: 50%; 
+    margin-bottom: 3%;
+    margin-left: 9%;
+    }
+
+#tabela3{
+    margin-top: 2%;
+    text-align: center;
+    width: 50%; 
+    margin-left: 9%;
+    margin-bottom: 3%;
+    }
+
+
+#tabela4{
+    margin-top: 2%;
+    text-align: center;
+    width: 50%; 
+    margin-left: 9%;
+    margin-bottom: 3%;
+    }
+
+
+#resultados{
+
+display: flex; 
+justify-content: space-around; 
+width: 60%; 
+margin-left: 18%;
+
+ }
+}
