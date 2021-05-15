@@ -11,9 +11,9 @@ var array_emails = [];
 for (n in a){
 
     addEventListener('click',function(event){
-      
+
         event.preventDefault();
-       
+
 
     });
 
@@ -78,14 +78,17 @@ function cadastraPessoa(){
     linhas.appendChild(tdNome);
     linhas.appendChild(tdEmail);
 
+
+    capturaNomeInput = document.getElementById("nome");
+    capturaEmailInput = document.getElementById("email");
+    
+    capturaNomeInput.value = " ";
+    capturaEmailInput.value = " ";
+
     let dados = document.getElementById("tabela1")
-    dados. classList. remove('invisivel');
-    dados. classList. add('fadein');
-    
+    dados.classList.remove('invisivel');
+    dados.classList.add('fadein');
 
-
-
-    
 
 
 }
@@ -107,10 +110,16 @@ function cadastraTarefa(){
     
     tabela.appendChild(linhas);
     linhas.appendChild(tdtarefa);
+
+    capturaTarefaInput = document.getElementById("tarefas");
+    
+    capturaTarefaInput.value = " ";
+
+
     let dados = document.getElementById("tabela2")
     dados. classList. remove('invisivel');
     dados. classList. add('fadein');
-    document.getElementById("tarefa").value="";
+
 
 
 }
