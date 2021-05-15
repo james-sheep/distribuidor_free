@@ -1,23 +1,23 @@
 
-var a = document.querySelectorAll('#btn');
-console.log(a);
+document.getElementById('btn').addEventListener('click',function(event){
+    event.preventDefault();
+});
+
+document.getElementById('btn2').addEventListener('click',function(event){
+    event.preventDefault();
+});
+
+document.getElementById('btn3').addEventListener('click',function(event){
+    event.preventDefault();
+});
+
+
+
 var array_pessoas = [];
 var array_tarefas = [];
 var array_emails = [];
 
 
-// Eventos:
-
-for (n in a){
-
-    addEventListener('click',function(event){
-
-        event.preventDefault();
-
-
-    });
-
-}
 
 var tabela = document.querySelector("#NomeEmail");
 tabela.addEventListener("dblclick", function(event) {
@@ -85,6 +85,10 @@ function cadastraPessoa(){
     capturaNomeInput.value = " ";
     capturaEmailInput.value = " ";
 
+    let listaDeEmail = document.getElementById("listaDeEmail");
+    listaDeEmail.value = array_emails;
+    console.log(array_emails);
+
     let dados = document.getElementById("tabela1")
     dados.classList.remove('invisivel');
     dados.classList.add('fadein');
@@ -120,7 +124,7 @@ function cadastraTarefa(){
     dados. classList. remove('invisivel');
     dados. classList. add('fadein');
 
-
+  
 
 }
 

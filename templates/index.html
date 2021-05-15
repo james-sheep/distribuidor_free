@@ -105,7 +105,7 @@
               <label class="form-label">Nome ou número da tarefa:</label>
               <input type="text" id="tarefas" name="tarefa" class="form-control">
             </div>
-            <button  id="btn"  onclick="cadastraTarefa();" class="btn btn-primary">Adicionar</button>
+            <button  id="btn2"  onclick="cadastraTarefa();" class="btn btn-primary">Adicionar</button>
             </form>
             </div>
     </section>
@@ -149,9 +149,19 @@
 </div>
 </section>
 
+<section style="display: flex; justify-content:center;" id="BTN_distrib">
+  <button style=" margin-right: 2%; "  id="btn3" onclick="Resultado();" class="btn btn-success">Distribuir tarefas</button>      
+  <div>
+    <form action="/" method="POST">
+      <input type="hidden" id="listaDeEmail" name="listaDeEmail">   
+      <button style="opacity: 0.6; width: 100%;" type="submit"  class="btn btn-warning">Enviar-email</button>   
+    </form>
+   
+  </div>
+  
 
-<section style="display: flex; justify-content: space-around;" id="BTN_distrib">
-  <button  id="btn" onclick="Resultado();" class="btn btn-success">Distribuir tarefas</button>      
+
+
 </section>
   
 
@@ -160,9 +170,7 @@
 
 
 
-<script src="{{url_for('static',filename='js/index.js')}}"   ></script>
 </body>
-
-
+<script src="{{url_for('static',filename='js/index.js')}}"></script>
 </html>
 
