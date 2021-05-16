@@ -29,7 +29,7 @@ def notificar():
          emails = request.form["listaDeEmail"]
          responsavel = request.form["coordenador"]
          lista_email = emails.split(",")
-         
+         coordenadorEmail = request.form["coordenadorEmail"]
          pessoas = request.form["listaDePessoas"]
          lista_pessoas = pessoas.split(",")
          
@@ -46,7 +46,8 @@ def notificar():
                                                 lista_tarefas=lista_tarefas, 
                                                 lista_pessoas = lista_pessoas,
                                                 numeroTarefas = numeroTarefas,
-                                                numero_pessoas = numero_pessoas)
+                                                numero_pessoas = numero_pessoas,
+                                                coordenadorEmail = coordenadorEmail)
 
         
 
