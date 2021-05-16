@@ -30,10 +30,10 @@ def notificar():
 
          emails = request.form["listaDeEmail"]
          responsavel = request.form["coordenador"]
-         lista_email = emails.split()
-         print(type(lista_email))
-         print(responsavel)
-        return render_template('resultado.html')
+         lista_email = emails.split(",")
+         print(lista_email)
+        
+        return render_template('resultado.html', responsavel=responsavel,lista_email = lista_email)
 
         
 

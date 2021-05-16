@@ -63,21 +63,26 @@
 
 
 <div  style="padding: 3%">
-
   <div id="text">
-    <strong><p> Quantidade de Tarefas: </p><strong>
-    <p>{}</p>  
+    <p> Responsável pela distribuição: </p>
+    <strong><p>{{responsavel}}</p></strong>  
+  </div>
+  <div id="text">
+    <p> Quantidade de Tarefas: </p>
+    <strong><p>{}</p></strong> 
   </div>
       
   <div id="text">
-    <strong><p> Numero de Participantes:  </p><strong>
-      <p>{}</p>  
+   <p> Numero de Participantes:  </p>
+    <strong><p>{}</p> <strong> 
     </div>
   
   <div id="text">
     <strong><p> Destinatários: </p><strong>
-      <p>{}</p> </q> 
-      <p>{}</p>   
+    
+    {% for email in lista_email%}
+      <p>{{email}}</p></strong>
+    {%endfor%}
     </div>
 
  
