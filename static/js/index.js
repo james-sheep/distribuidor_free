@@ -1,3 +1,5 @@
+alert("A funcionalidade enviar e-mail ainda está em desenvolvimento")
+
 
 document.getElementById('btn').addEventListener('click',function(event){
     event.preventDefault();
