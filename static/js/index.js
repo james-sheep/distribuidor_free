@@ -60,49 +60,69 @@ tabelat.addEventListener("dblclick", function(event) {
 function cadastraPessoa(){
 
     var inputNome= document.querySelector("#nome");
-    var nome = inputNome.value; 
-    array_pessoas.push(nome);
-
     var inputEmail = document.querySelector("#email");
     var email = inputEmail.value;
-    array_emails.push(email);
+    var nome = inputNome.value; 
+    console.log(email)
+   
 
-    var tabela = document.querySelector("#NomeEmail");
-    var linhas = document.createElement("tr");
+    if  ( email == " ") {
 
-    var tdNome = document.createElement("td");
-    tdNome.textContent = nome;
+        return alert( "Nenhum campo pode ficar em branco")
 
-    var tdEmail = document.createElement("td");
-    tdEmail.textContent = email;
-    
-    tabela.appendChild(linhas);
-    linhas.appendChild(tdNome);
-    linhas.appendChild(tdEmail);
+    }
 
+        array_pessoas.push(nome);
 
-    capturaNomeInput = document.getElementById("nome");
-    capturaEmailInput = document.getElementById("email");
-    
-    capturaNomeInput.value = " ";
-    capturaEmailInput.value = " ";
+        var inputEmail = document.querySelector("#email");
+        var email = inputEmail.value;
+        array_emails.push(email);
 
-    let listaDeEmail = document.getElementById("listaDeEmail");
-    listaDeEmail.value = array_emails;
-    console.log(array_emails);
+        var tabela = document.querySelector("#NomeEmail");
+        var linhas = document.createElement("tr");
 
-    let dados = document.getElementById("tabela1")
-    dados.classList.remove('invisivel');
-    dados.classList.add('fadein');
+        var tdNome = document.createElement("td");
+        tdNome.textContent = nome;
 
+        var tdEmail = document.createElement("td");
+        tdEmail.textContent = email;
+        
+        tabela.appendChild(linhas);
+        linhas.appendChild(tdNome);
+        linhas.appendChild(tdEmail);
 
 
-}
+        capturaNomeInput = document.getElementById("nome");
+        capturaEmailInput = document.getElementById("email");
+        
+        capturaNomeInput.value = " ";
+        capturaEmailInput.value = " ";
+
+        let listaDeEmail = document.getElementById("listaDeEmail");
+        listaDeEmail.value = array_emails;
+        console.log(array_emails);
+
+        let dados = document.getElementById("tabela1")
+        dados.classList.remove('invisivel');
+        dados.classList.add('fadein');
+
+          
+        
+} 
+
+
 
 function cadastraTarefa(){
 
     var inputTarefas= document.querySelector("#tarefas");
     var tarefa= inputTarefas.value; 
+    
+    if  ( tarefa == " ") {
+
+        return alert( "Nenhum campo pode ficar em branco")
+    }
+   
+   
     array_tarefas.push(tarefa);
 
    
@@ -159,8 +179,17 @@ function Resultado(){
     let listaDeTarefas = document.getElementById("listaDeTarefas");
     listaDeTarefas.value = array_tarefas;
 
+if (array_pessoas.length == 0){
 
+    return alert( "Nenhum campo pode ficar em branco")
 
+}
+
+if (tarefas.length == 0){
+
+    return alert( "Nenhum campo pode ficar em branco")
+
+}
 
 
     for( i=0; i<array_pessoas.length; i++){
@@ -192,6 +221,17 @@ function Resultado(){
     let dados2 = document.getElementById("tabela4")
     dados2. classList. remove('invisivel');
     dados2. classList. add('fadein');
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

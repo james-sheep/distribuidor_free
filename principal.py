@@ -1,12 +1,14 @@
 
 
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 from flask import Flask
 from datetime import date, datetime
 
-app = Flask(__name__)
+from flask.helpers import flash
 
+app = Flask(__name__)
+app.secret_key = "933hfha0-39gf"
 lista = []
 lista_tarefas = []
 
@@ -31,8 +33,7 @@ def notificar():
                 hora_atual = datetime.now()
                 data_em_texto = f"{data_atual.day}/{data_atual.month}/{data_atual.year}"               
                 hora_em_texto = hora_atual.strftime('%H:%M')
-                
-                
+
                 emails = request.form["listaDeEmail"]
                 responsavel = request.form["coordenador"]
                 lista_email = emails.split(",")
@@ -44,28 +45,27 @@ def notificar():
                 lista_tarefas = tarefas.split(",")
                 numeroTarefas = len(lista_tarefas)
                 numero_pessoas = len(lista_pessoas)
-                print(lista_email)
-                print(lista_pessoas)
-                print(lista_tarefas)
+                print(responsavel)
 
-                return render_template('resultado.html', responsavel=responsavel,
-                                                lista_email = lista_email, 
-                                                lista_tarefas=lista_tarefas, 
-                                                lista_pessoas = lista_pessoas,
-                                                numeroTarefas = numeroTarefas,
-                                                numero_pessoas = numero_pessoas,
-                                                coordenadorEmail = coordenadorEmail,
-                                                data = data_em_texto,
-                                                hora = hora_em_texto)
+                if responsavel == "" or coordenadorEmail =="":
+                        flash("Você precisa se identificar para distribuir as tarefas!", category="alert")
+                        return render_template('index.html')
 
-
-
-
-
-
-
+                else: 
+                           
+                        return render_template('resultado.html',
+                                         responsavel=responsavel,
+                                        lista_email = lista_email, 
+                                        lista_tarefas=lista_tarefas, 
+                                        lista_pessoas = lista_pessoas,
+                                        numeroTarefas = numeroTarefas,
+                                        numero_pessoas = numero_pessoas,
+                                        coordenadorEmail = coordenadorEmail,
+                                        data = data_em_texto,
+                                        hora = hora_em_texto)
 
 
+             
 
 
 if __name__ == "__main__":

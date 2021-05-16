@@ -11,6 +11,17 @@
     
     
     <title>Distribuidor de Tarefas</title>
+    {% with messages = get_flashed_messages() %}
+  {% if messages %}
+    <ul class=flashes>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+    </ul>
+  {% endif %}
+{% endwith %}
+{% block body %}{% endblock %}
+
   </head>
   <body>
    
@@ -71,7 +82,7 @@
           
           <div class="mb-3">
             <label class="form-label">E-mail:</label>
-            <input type="email" name="email" id="email" class="form-control">
+            <input type="text" name="email" id="email" class="form-control">
           </div>
           <button  id="btn" type="submit" onclick="cadastraPessoa();" class="btn btn-primary">Cadastrar</button>
           </form>
@@ -171,7 +182,7 @@
     <input type="hidden" id="listaDeTarefas" name="listaDeTarefas"> 
     <input type="hidden" id="listaDePessoas" name="listaDePessoas"> 
   </div>  
-    <button  style=" margin-bottom: 6%;" type="submit"  class="btn btn-success"> Concluir</button>   
+    <button  style=" margin-bottom: 6%;" type="submit"  id="btnconcluir" class="btn btn-success"> Concluir</button>   
   </form>
 </section>
 
