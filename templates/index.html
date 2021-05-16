@@ -150,7 +150,7 @@
 </section>
 
 <section style="display: flex; justify-content:center; margin-bottom: 8%;" id="BTN_distrib">
-  <button   id="btn3" onclick="Resultado();" class="btn btn-success">Distribuir tarefas</button>      
+  <button   id="btn3" onclick="Resultado();" class="btn btn-success">Sortear tarefas</button>      
   
 </section>
   
@@ -161,13 +161,13 @@
 
 
 <section id="section_forms"> 
-  <form action="/" method="POST">
+  <form action="/notificar" method="POST">
     <div class="mb-3">
     <label class="form-label"> O responsável pela distribuição é: </label>
     <input style="width: 100%;" type="text" id="coordenador" name="coordenador"  class="form-control">
     <input type="hidden" id="listaDeEmail" name="listaDeEmail"> 
   </div>  
-    <button  style="opacity: 0.5" type="submit"  class="btn btn-warning">Enviar-email</button>   
+    <button  style="opacity: 0.5; margin-bottom: 6%;" type="submit"  class="btn btn-warning"> Concluir distribuição</button>   
   </form>
 </section>
 

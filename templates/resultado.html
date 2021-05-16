@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="pt">
+  <head>
+   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/index.css')}}">
+    
+    
+    
+    <title>Distribuidor de Tarefas</title>
+  </head>
+  <body>
+   
+    <img id="img" src="{{url_for('static',filename='Original.svg')}}">
+
+
+
+   
+    <article>
+        <p>Resumo:</p>
+    </article>
+
+    
+
+    <section id="section_forms2"> 
+    <div  id="tabela3">
+      <table  class="table table-striped table-responsive table-bordered">
+        <thead>
+            <tr>
+                <th>NOME</th>
+            </tr>
+        </thead>
+        
+        <tbody id="pessoa">             
+        
+        
+       </tbody>
+
+    </table>
+  </div>
+
+  <div id="tabela4">
+    <table  class="table table-striped table-responsive table-bordered">
+      <thead>
+          <tr>
+            <th>TAREFA</th>
+          </tr>
+      </thead>
+      <tbody id="tarefa">          
+      </tbody>
+  </table>
+</div>
+</section>
+
+
+  
+<article>
+  <p>Detalhes:</p>
+</article>
+
+
+<div id="apresent">
+
+  <div id="text">
+    <strong><p> Quantidade de Tarefas: </p><strong>
+  </div>
+      
+  <div id="text">
+    <strong><p> Numero de Participantes:  </p><strong>
+  </div>
+  
+  <div id="text">
+    <strong><p> Destinatários: </p><strong>
+  </div>
+
+ 
+    <form action="/" method="GET">
+      <button style="opacity: 0.5; margin-top: 6%; margin-bottom: 6%; margin-left: 20%; width: 60%;" type="submit"  class="btn btn-primary"> Voltar </button>   
+    </form>
+
+
+</div>
+
+
+
+
+
+
+</body>
+<script src="{{url_for('static',filename='js/index.js')}}"></script>
+</html>
+

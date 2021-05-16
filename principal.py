@@ -22,6 +22,29 @@ def index():
 
 
 
+
+
+@app.route('/notificar', methods=['GET','POST'])
+def notificar():
+        if request.method == "POST":
+
+         emails = request.form["listaDeEmail"]
+         responsavel = request.form["coordenador"]
+         lista_email = emails.split()
+         print(type(lista_email))
+         print(responsavel)
+        return render_template('resultado.html')
+
+        
+
+
+
+
+
+
+
+
+
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 5000))
     app.run(host='0.0.0.0', port=port)
