@@ -153,6 +153,15 @@ function Resultado(){
     console.log(array_tarefas)
     tabela1 = document.getElementById("pessoa");
     tabela2 = document.getElementById("tarefa");
+    
+    let listaDePessoas = document.getElementById("listaDePessoas");
+    listaDePessoas.value = array_pessoas;
+    let listaDeTarefas = document.getElementById("listaDeTarefas");
+    listaDeTarefas.value = array_tarefas;
+
+
+
+
 
     for( i=0; i<array_pessoas.length; i++){
 

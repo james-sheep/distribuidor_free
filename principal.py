@@ -22,8 +22,6 @@ def index():
 
 
 
-
-
 @app.route('/notificar', methods=['GET','POST'])
 def notificar():
         if request.method == "POST":
@@ -31,9 +29,24 @@ def notificar():
          emails = request.form["listaDeEmail"]
          responsavel = request.form["coordenador"]
          lista_email = emails.split(",")
+         
+         pessoas = request.form["listaDePessoas"]
+         lista_pessoas = pessoas.split(",")
+         
+         tarefas = request.form["listaDeTarefas"]
+         lista_tarefas = tarefas.split(",")
+         numeroTarefas = len(lista_tarefas)
+         numero_pessoas = len(lista_pessoas)
          print(lista_email)
+         print(lista_pessoas)
+         print(lista_tarefas)
         
-        return render_template('resultado.html', responsavel=responsavel,lista_email = lista_email)
+        return render_template('resultado.html', responsavel=responsavel,
+                                                lista_email = lista_email, 
+                                                lista_tarefas=lista_tarefas, 
+                                                lista_pessoas = lista_pessoas,
+                                                numeroTarefas = numeroTarefas,
+                                                numero_pessoas = numero_pessoas)
 
         
 

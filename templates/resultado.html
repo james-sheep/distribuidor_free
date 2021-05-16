@@ -35,7 +35,11 @@
         </thead>
         
         <tbody id="pessoa">             
-        
+          {% for pessoa in lista_pessoas%}
+          <tr>
+          <td>{{ pessoa }}</td>
+          </tr>
+          {%endfor%}
         
        </tbody>
 
@@ -49,7 +53,12 @@
             <th>TAREFA</th>
           </tr>
       </thead>
-      <tbody id="tarefa">          
+      <tbody id="tarefa">  
+        {% for tarefa in lista_tarefas%}
+        <tr>
+        <td>{{ tarefa }}</td>
+        </tr>
+        {%endfor%}
       </tbody>
   </table>
 </div>
@@ -69,12 +78,12 @@
   </div>
   <div id="text">
     <p> Quantidade de Tarefas: </p>
-    <strong><p>{}</p></strong> 
+    <strong><p>{{numeroTarefas}}</p></strong> 
   </div>
       
   <div id="text">
    <p> Numero de Participantes:  </p>
-    <strong><p>{}</p> <strong> 
+    <strong><p>{{numero_pessoas}}</p> <strong> 
     </div>
   
   <div id="text">
