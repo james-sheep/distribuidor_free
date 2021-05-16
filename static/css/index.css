@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@500&display=swap');
 
 /* reset*/
 
@@ -12,11 +11,16 @@ margin: 0;
 }
 
 * {
-font-family: 'Roboto', sans-serif;
-
+    font-family: 'IBM Plex Sans', sans-serif;
 }
 
+label{
 
+    font-family: 'IBM Plex Sans', sans-serif;
+
+
+
+}
 .fadeOut {
     opacity: 0;
     transition: 0.5s;
@@ -29,7 +33,7 @@ font-family: 'Roboto', sans-serif;
 
 button{
 
-opacity: 0.8;
+opacity: 0.5;
 
 }
 
@@ -57,17 +61,33 @@ opacity: 0.8;
 font-size: medium;
 }
 
+
+#apresent{
+
+    display: flex;
+    justify-content:center;
+	margin: 1%;
+    width: 100%;
+  
+}
+
+
 #text{
     
-background-color: rgb(231, 231, 238);
-margin: 7%;
+background-color: rgba(231, 231, 238, 0.459);
+margin: 2%;
 border-radius: 15px;
 box-shadow: 2px 2px 2px #CCC;
-padding: 2%;
+padding-top: 2%;
+padding-left: 1%;
 color: rgba(54, 54, 54, 0.74);
 text-align: center;
 font-size: small;
 }
+
+
+
+
 
 #section_forms{
 display: flexbox; 
