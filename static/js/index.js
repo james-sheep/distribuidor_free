@@ -171,8 +171,7 @@ function Resultado(){
 
     console.log(array_pessoas);
     console.log(array_tarefas)
-    tabela1 = document.getElementById("pessoa");
-    tabela2 = document.getElementById("tarefa");
+    
     
     let listaDePessoas = document.getElementById("listaDePessoas");
     listaDePessoas.value = array_pessoas;

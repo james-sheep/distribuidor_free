@@ -87,11 +87,10 @@
           <button  id="btn" type="submit" onclick="cadastraPessoa();" class="btn btn-primary">Cadastrar</button>
           </form>
         </div>
-          
-    
-
       </section>
 
+
+      
     <article>
         <p>Irão fazer isso tudo:</p>
     </article>
@@ -111,59 +110,21 @@
         </div>
 
             <div id="form1">
-            <form>
+           
               <div class="mb-3">
               <label class="form-label">Nome ou número da tarefa:</label>
               <input type="text" id="tarefas" name="tarefa" class="form-control">
             </div>
             <button   id="btn2"  onclick="cadastraTarefa();" class="btn btn-primary">Adicionar</button>
-            </form>
+           
             </div>
     </section>
           
 
 
-    <article>
-        <p>Desse jeito:</p>
-    </article>
 
+  <button style="display:none" id="btn3"  class="btn btn-primary">Sortear tarefas</button>      
 
-    
-
-    <section id="section_forms2"> 
-    <div class="invisivel" id="tabela3">
-      <table  class="table table-striped table-responsive table-bordered">
-        <thead>
-            <tr>
-                <th>NOME</th>
-            </tr>
-        </thead>
-        
-        <tbody id="pessoa">             
-        
-        
-       </tbody>
-
-    </table>
-  </div>
-
-  <div class="invisivel" id="tabela4">
-    <table  class="table table-striped table-responsive table-bordered">
-      <thead>
-          <tr>
-            <th>TAREFA</th>
-          </tr>
-      </thead>
-      <tbody id="tarefa">          
-      </tbody>
-  </table>
-</div>
-</section>
-
-<section style="display: flex; justify-content:center; margin-bottom: 8%;" id="BTN_distrib">
-  <button   id="btn3" onclick="Resultado();" class="btn btn-primary">Sortear tarefas</button>      
-  
-</section>
   
 <article>
   <p>Que comecem os jogos!</p>
@@ -182,7 +143,7 @@
     <input type="hidden" id="listaDeTarefas" name="listaDeTarefas"> 
     <input type="hidden" id="listaDePessoas" name="listaDePessoas"> 
   </div>  
-    <button  style=" margin-bottom: 6%;" type="submit"  id="btnconcluir" class="btn btn-success"> Concluir</button>   
+    <button onclick="Resultado();" style=" margin-bottom: 6%;" type="submit"  id="btnconcluir" class="btn btn-success"> Concluir</button>   
   </form>
 </section>
 
