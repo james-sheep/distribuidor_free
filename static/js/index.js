@@ -57,40 +57,29 @@ tabelat.addEventListener("dblclick", function(event) {
 
 //Funções:
 
-function verificaBranco(){
 
-    var inputNome= document.getElementById("nome");
-    var inputEmail = document.getElementById("email");
-    var email = inputEmail.value;
-    var nome = inputNome.value; 
-    if (nome || email == " "){
-
-        return true
-
-
-    }
-
-    return false
-}
-var verificaBranco = verificaBranco()
-
-
-console.log(verificaBranco);
 
 function cadastraPessoa(){
 
-   
-    if  ( verificaBranco == false) {
-
-        return alert( "Nenhum campo pode ficar em branco")
-
-    }
-
-        var inputNome= document.getElementById("nome");
+    var inputNome= document.getElementById("nome");
         var inputEmail = document.getElementById("email");
         var email = inputEmail.value;
         var nome = inputNome.value; 
+   
+
+        if (nome == ""){
+
+            return alert( "Nenhum campo pode ficar em branco")
+        
+        }
     
+        if (email == ""){
+
+            return alert( "Nenhum campo pode ficar em branco")
+        
+        }
+    
+        
         array_pessoas.push(nome);
 
         var inputEmail = document.querySelector("#email");
@@ -136,9 +125,10 @@ function cadastraTarefa(){
     var inputTarefas= document.querySelector("#tarefas");
     var tarefa= inputTarefas.value; 
     
-    if  ( tarefa == " ") {
-
+    if ( tarefa == ""){
+        
         return alert( "Nenhum campo pode ficar em branco")
+    
     }
    
    
