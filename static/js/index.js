@@ -103,8 +103,8 @@ function cadastraPessoa(){
         capturaNomeInput = document.getElementById("nome");
         capturaEmailInput = document.getElementById("email");
         
-        capturaNomeInput.value = " ";
-        capturaEmailInput.value = " ";
+        capturaNomeInput.value = "";
+        capturaEmailInput.value = "";
 
         let listaDeEmail = document.getElementById("listaDeEmail");
         listaDeEmail.value = array_emails;
@@ -148,7 +148,7 @@ function cadastraTarefa(){
 
     capturaTarefaInput = document.getElementById("tarefas");
     
-    capturaTarefaInput.value = " ";
+    capturaTarefaInput.value = "";
 
 
     let dados = document.getElementById("tabela2")
