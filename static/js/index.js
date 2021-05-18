@@ -57,21 +57,40 @@ tabelat.addEventListener("dblclick", function(event) {
 
 //Funções:
 
-function cadastraPessoa(){
+function verificaBranco(){
 
-    var inputNome= document.querySelector("#nome");
-    var inputEmail = document.querySelector("#email");
+    var inputNome= document.getElementById("nome");
+    var inputEmail = document.getElementById("email");
     var email = inputEmail.value;
     var nome = inputNome.value; 
-    console.log(email)
-   
+    if (nome || email == " "){
 
-    if  ( email == " ") {
+        return true
+
+
+    }
+
+    return false
+}
+var verificaBranco = verificaBranco()
+
+
+console.log(verificaBranco);
+
+function cadastraPessoa(){
+
+   
+    if  ( verificaBranco == false) {
 
         return alert( "Nenhum campo pode ficar em branco")
 
     }
 
+        var inputNome= document.getElementById("nome");
+        var inputEmail = document.getElementById("email");
+        var email = inputEmail.value;
+        var nome = inputNome.value; 
+    
         array_pessoas.push(nome);
 
         var inputEmail = document.querySelector("#email");
