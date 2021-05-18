@@ -294,8 +294,8 @@ text-align: center;
 #tabela1{
 margin-top: 2%;
 text-align: center;
-width: 50%; 
-margin-left: 9%;
+width: 90%; 
+margin-left: 6%;
 margin-bottom: 3%;
 }
 
@@ -309,9 +309,10 @@ margin-bottom: 3%;
 #tabela2{
     margin-top: 3%;
     text-align: center;
-    width: 50%; 
+    width: 90%; 
+    margin-left: 6%;
     margin-bottom: 3%;
-    margin-left: 9%;
+   
     }
 
 #tabela3{
