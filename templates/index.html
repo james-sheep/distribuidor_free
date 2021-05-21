@@ -25,32 +25,36 @@
   </head>
   <body>
    
-    <img id="img" src="{{url_for('static',filename='Original.svg')}}">
+    <img id="img" src="{{url_for('static',filename='logo.png')}}">
 
 
     <article>
-        <p>Distribuidor de Tarefas</p>
+        <p>DISTRIBUIDOR DE TAREFAS</p>
         
     </article>
 
     <div id="apresent">
     
-       <div id="text">
-        <p> Quer sortear as tarefas  do seu time?</p>
-       </div>
-    
-       <div id="text">
-       <p> Então deixa com a gente! </p>
-       </div>
-       
-       <div id="text">
-       <p> Dividimos tudo e mandamos por e-mail.</p>
+      <div class="bg-dark text-secondary px-4 py-5 text-center">
+    <div class="py-5">
+      <h1 class="display-5 fw-bold text-white">Distribuidor de tarefas</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="fs-5 mb-4">Gostaria de Trazer mais eficiência e equidade na distribuição das tarefas do seu time? Então permita que nossa aplicação cadastre as pessoas, adicione as tarefas, realize o sorteio e ainda envie um e-mail notificando a todos. Teste nossa versão FREE e se quiser ir além conheça nossa solução PRO</p>
       </div>
+    </div>
+  </div>
+
+  <div class="b-example-divider mb-0"></div>
+</main> 
+
+
+
+
     </div>
 
 
     <article>
-        <p>As pessoas da equipe:</p>
+        <p>Cadastre os membros da sua equipe:</p>
     </article>
 
        <section id="section_forms"> 
@@ -84,7 +88,7 @@
             <label class="form-label">E-mail:</label>
             <input type="text" name="email" id="email" class="form-control">
           </div>
-          <button  id="btn" type="submit" onclick="cadastraPessoa();" class="btn btn-primary">Cadastrar</button>
+          <button  id="btn" type="submit" onclick="cadastraPessoa();" class="btn btn-dark">Cadastrar</button>
           </form>
         </div>
       </section>
@@ -92,7 +96,7 @@
 
       
     <article>
-        <p>Irão fazer isso tudo:</p>
+        <p>Insira as tarefas:</p>
     </article>
 
     <section id="section_forms"> 
@@ -115,7 +119,7 @@
               <label class="form-label">Nome ou número da tarefa:</label>
               <input type="text" id="tarefas" name="tarefa" class="form-control">
             </div>
-            <button   id="btn2"  onclick="cadastraTarefa();" class="btn btn-primary">Adicionar</button>
+            <button   id="btn2"  onclick="cadastraTarefa();" class="btn btn-dark">Adicionar</button>
            
             </div>
     </section>
@@ -127,13 +131,13 @@
 
   
 <article>
-  <p>Que comecem os jogos!</p>
+  <p>Dados do Distribuidor:</p>
 </article>
 
 
 <section id="section_forms"> 
 <div id="form1">
-  <form action="/notificar" method="POST">
+  <form action="/resultado" method="POST">
    
     <label class="form-label"> O responsável pela distribuição é: </label>
     <input style="width: 100%;" type="text" id="coordenador" name="coordenador"  class="form-control">
@@ -143,7 +147,7 @@
     <input type="hidden" id="listaDeTarefas" name="listaDeTarefas"> 
     <input type="hidden" id="listaDePessoas" name="listaDePessoas"> 
   
-    <button onclick="Resultado();"  style=" margin-bottom: 6%; margin-top: 6%;" type="submit"  id="btn2" class="btn btn-success"> Concluir</button>   
+    <button onclick="Resultado();"  style=" margin-bottom: 6%; margin-top: 6%; opacity: 0.7;" type="submit"  id="btn2" class="btn btn-success"> Concluir</button>   
   </form>
 </div>
 </section>

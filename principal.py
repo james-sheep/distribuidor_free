@@ -1,19 +1,45 @@
 
 
+import re
 from flask import Flask, render_template, request, redirect, url_for, flash
 import os
 from flask import Flask
 from datetime import date, datetime
-
+from flask_mail import Mail, Message
 from flask.helpers import flash
+from threading import Thread
 
 app = Flask(__name__)
+
+
 app.secret_key = "933hfha0-39gf"
+
+
+app.config["MAIL_SERVER"] = "smtp.gmail.com"
+app.config["MAIL_PORT"] = "587"
+app.config["MAIL_USE_TLS"] = True
+app.config["MAIL_USERNAME"] = os.environ.get("MAIL_USERNAME")
+app.config["MAIL_PASSWORD"] = os.environ.get("MAIL_PASSWORD")
+app.config["FLASKY_MAIL_SUBJECT_PREFIX"] = "[Flasky]"
+app.config["FLASKY_MAIL_SENDER"] = 'Flasky Admin <flasky@example.com>'
+mail = Mail(app)
+
+
 lista = []
 lista_tarefas = []
 
 
-            
+
+def enviar_email(listEmail, subject, template, **kwargs):
+       
+       for email in listEmail:
+       
+                msg = Message(subject, sender = app.config["FLASKY_MAIL_SENDER"], recipients= [email])
+                msg.html = render_template(template +".html", **kwargs)
+                mail.send(msg)
+
+
+
 @app.route('/', methods=['GET','POST'])
 def index():
         if request.method == "POST":
@@ -23,9 +49,8 @@ def index():
                 return render_template('index.html')
 
 
-
-@app.route('/notificar', methods=['GET','POST'])
-def notificar():
+@app.route('/resultado', methods=['GET','POST'])
+def resultado():
         
         if request.method == "POST":
                 
@@ -45,27 +70,43 @@ def notificar():
                 lista_tarefas = tarefas.split(",")
                 numeroTarefas = len(lista_tarefas)
                 numero_pessoas = len(lista_pessoas)
-                print(responsavel)
+                dicionario = dict(zip(lista_pessoas, lista_tarefas))
+                print(dicionario)
 
+
+               
                 if responsavel == "" or coordenadorEmail =="":
                         flash("Você precisa se identificar para distribuir as tarefas!", category="alert")
                         return render_template('index.html')
 
                 else: 
-                           
-                        return render_template('resultado.html',
-                                         responsavel=responsavel,
-                                        lista_email = lista_email, 
-                                        lista_tarefas=lista_tarefas, 
-                                        lista_pessoas = lista_pessoas,
-                                        numeroTarefas = numeroTarefas,
-                                        numero_pessoas = numero_pessoas,
-                                        coordenadorEmail = coordenadorEmail,
-                                        data = data_em_texto,
-                                        hora = hora_em_texto)
-
-
              
+
+                        enviar_email(lista_email, "Nova distribuição", "email", 
+                                
+                                responsavel=responsavel,
+                                lista_email = lista_email, 
+                                dicionario = dicionario,
+                                numeroTarefas = numeroTarefas,
+                                numero_pessoas = numero_pessoas,
+                                coordenadorEmail = coordenadorEmail,
+                                data = data_em_texto,
+                                hora = hora_em_texto)
+
+
+                        return  render_template('resultado.html',
+                                responsavel=responsavel,
+                                lista_email = lista_email, 
+                                lista_tarefas=lista_tarefas, 
+                                lista_pessoas = lista_pessoas,
+                                numeroTarefas = numeroTarefas,
+                                numero_pessoas = numero_pessoas,
+                                coordenadorEmail = coordenadorEmail,
+                                data = data_em_texto,
+                                hora = hora_em_texto)
+                
+
+
 
 
 if __name__ == "__main__":

@@ -44,7 +44,7 @@ article{
 text-align: center;
 
 box-shadow: 2px 2px 2px rgb(177, 174, 177);
-background-color: rgb(233, 206, 241);
+background-color: rgba(206, 202, 198, 0.562);
 
 padding: 1%;
 color: rgba(54, 54, 54, 0.74);
@@ -188,11 +188,12 @@ margin-bottom: 2%;
 
 @media only screen and (min-width: 480px){
 #img{
-    width: 35%;
-    display: flex;
-    justify-content: center;
-   
-    margin: 5%;
+    width: 20%;
+    display: flexbox;
+    justify-content: space-around;
+    margin-left: 40%;
+    margin-top: 20px;
+    margin-bottom: 20px;
    
     
     
@@ -215,6 +216,7 @@ opacity: 0.8;
 
 }
 
+
 article{
 
 display: flex;
@@ -222,8 +224,8 @@ text-align: center;
 justify-content: center;
 border-radius: 15px;
 box-shadow: 2px 2px 2px rgb(177, 174, 177);
-background-color: rgb(230, 197, 236);
-
+background-color: rgba(206, 202, 198, 0.562);
+color: rgb(48, 46, 46);
 padding: 1%;
 color: rgba(54, 54, 54, 0.74);
 font-size:larger;
@@ -273,7 +275,7 @@ margin: 3%;
 border-radius: 15px;
 box-shadow: 2px 2px 2px #CCC;
 padding: 2%;
-color: rgba(54, 54, 54, 0.74);
+color: rgba(82, 76, 76, 0.74);
 text-align: center;
 }
 
